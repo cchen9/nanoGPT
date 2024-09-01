@@ -5,10 +5,14 @@ Will save train.bin, val.bin containing the ids, and meta.pkl containing the
 encoder and decoder and some other related info.
 """
 import os
+os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+
 import pickle
 import requests
 import numpy as np
-
+import pdb
+pdb.set_trace()
 # download the tiny shakespeare dataset
 input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')
 if not os.path.exists(input_file_path):

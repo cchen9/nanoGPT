@@ -2,6 +2,8 @@
 A much shorter version of train.py for benchmarking
 """
 import os
+os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 from contextlib import nullcontext
 import numpy as np
 import time

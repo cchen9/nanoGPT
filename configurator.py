@@ -13,7 +13,9 @@ I know people are not going to love this, I just really dislike configuration
 complexity and having to prepend config. to every single variable. If someone
 comes up with a better simple Python solution I am all ears.
 """
-
+import os
+os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 import sys
 from ast import literal_eval
 

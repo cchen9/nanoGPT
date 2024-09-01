@@ -2,6 +2,8 @@
 Sample from a trained model
 """
 import os
+os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 import pickle
 from contextlib import nullcontext
 import torch

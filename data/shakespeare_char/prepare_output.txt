@@ -1,0 +1,3 @@
+(myenv) azureuser@trainllm:~/temporary_code/nanoGPT$ python data/shakespeare/prepare.py 
+train has 301,966 tokens
+val has 36,059 tokens

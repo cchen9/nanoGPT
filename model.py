@@ -6,7 +6,9 @@ https://github.com/openai/gpt-2/blob/master/src/model.py
 2) huggingface/transformers PyTorch implementation:
 https://github.com/huggingface/transformers/blob/main/src/transformers/models/gpt2/modeling_gpt2.py
 """
-
+import os
+os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 import math
 import inspect
 from dataclasses import dataclass
