@@ -2,8 +2,14 @@
 Sample from a trained model
 """
 import os
-os.environ['HF_HOME'] = '/home/azureuser/temporary_code/cache'
-os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+# Set the base directory for Hugging Face caches
+os.environ['HF_HOME'] = '/mnt/huggingface_cache'
+# Specifically set the datasets cache directory
+os.environ['HF_DATASETS_CACHE'] = '/mnt/huggingface_cache/datasets'
+# Set the directory for Hugging Face metrics cache
+os.environ['HF_METRICS_CACHE'] = '/mnt/huggingface_cache/metrics'
+# Optionally, set the directory for Hugging Face model cache
+os.environ['TRANSFORMERS_CACHE'] = '/mnt/huggingface_cache/models'
 import pickle
 from contextlib import nullcontext
 import torch
